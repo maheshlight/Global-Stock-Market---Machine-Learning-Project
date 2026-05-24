@@ -1,81 +1,120 @@
+# 📈 Global Stock Market — Machine Learning Project
 
-
-
-
-# 📈 Global Stock Market – Machine Learning Project
-
-A comprehensive Machine Learning project analyzing global stock market data 
-across 200 companies, 10 countries, and 90,040 records to predict prices, 
-classify signals, and optimize portfolios.
+> **Team 1 | Machine Learning Mini Project | Python & Jupyter Notebook**
 
 ---
 
 ## 📌 Project Overview
 
-This project solves **10 Machine Learning Problem Statements** on real-world 
-global stock market data spanning January 2023 to March 2026.
+This project performs an end-to-end **Machine Learning analysis on Global Stock Market data** covering **200 companies across 10 countries** from **January 2023 to March 2026** — a dataset of **90,040 records**.
+
+The project tackles **10 real-world financial problem statements** using supervised, unsupervised, and statistical ML techniques, with fully interactive visualizations.
 
 ---
 
-## 🌍 Dataset
+## 👥 Team Members
 
-| Detail | Value |
-|--------|-------|
-| Total Records | 90,040 |
-| Companies | 200 |
-| Countries | 10 (USA, UK, India, China, Japan, Germany, France, Brazil, Canada, Australia) |
-| Date Range | Jan 2023 – Mar 2026 |
-| Sectors | 8 |
-
----
-
-## 🤖 10 ML Problem Statements
-
-| # | Problem | Model Used | Result |
-|---|---------|-----------|--------|
-| PS1 | Stock Price Prediction | Random Forest | R² = 0.94 |
-| PS2 | Buy/Sell Classification | Random Forest | Accuracy = 85% |
-| PS3 | Cross-Sector Clustering | K-Means + PCA | 4 Clusters |
-| PS4 | Investor Sentiment Analysis | Correlation + Rolling Window | r = 0.74 |
-| PS5 | Portfolio Optimization (MPT) | Monte Carlo Simulation | Sharpe = 2.14 |
-| PS6 | Volatility Forecasting | Random Forest Regressor | R² = 0.87 |
-| PS7 | Anomaly Detection | Isolation Forest + IQR | 2.3% Anomalies |
-| PS8 | Trend Classification | Random Forest (Multi-Class) | Accuracy = 82% |
-| PS9 | War Period Impact Analysis | T-Test + Mann-Whitney | p < 0.001 |
-| PS10 | Sector Rotation Strategy | Return Momentum Ranking | +12% vs Benchmark |
+- Ankit
+- Samir
+- Sushant
+- Mahesh
+- Pooja
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **Python**
-- **Pandas & NumPy** – Data manipulation
-- **Scikit-Learn** – ML models
-- **Matplotlib & Seaborn** – Visualization
-- **Plotly** – Interactive charts
-- **SciPy** – Statistical testing
+| Category | Tools / Libraries |
+|----------|------------------|
+| **Language** | Python 3 |
+| **Notebook Environment** | Jupyter Notebook |
+| **Data Handling** | Pandas, NumPy |
+| **Visualization** | Plotly Express, Plotly Graph Objects, Plotly Subplots, Plotly Figure Factory, Seaborn |
+| **Machine Learning** | Scikit-learn (sklearn) |
+| **ML Models** | Linear Regression, Logistic Regression, Random Forest (Regressor & Classifier), Gradient Boosting Regressor, Decision Tree Classifier, KMeans Clustering, Isolation Forest, Local Outlier Factor, Ridge Regression |
+| **ML Utilities** | StandardScaler, LabelEncoder, PCA, train_test_split |
+| **ML Metrics** | MAE, RMSE, R², ROC-AUC, Confusion Matrix, Classification Report |
+| **Optimization** | SciPy (`scipy.optimize.minimize`) |
+| **Data Source** | `Global_Stock_Market_Master_Dataset.xlsx` |
 
 ---
 
-## 🔑 Key Findings
+## 📂 Dataset
 
-- 🏆 Random Forest predicts stock prices at **R² = 0.94**
-- 📊 **85% accuracy** on Buy/Sell signal classification
-- 💼 Portfolio optimization achieves **Sharpe Ratio = 2.14**
-- ⚠️ War period causes **-3.2% avg daily return** (statistically proven)
-- 📈 Sector Rotation strategy outperforms benchmark by **~12% annually**
+| Field | Detail |
+|-------|--------|
+| **File** | `Global_Stock_Market_Master_Dataset.xlsx` |
+| **Records** | 90,040 rows |
+| **Companies** | 200 |
+| **Countries** | 10 |
+| **Date Range** | January 2023 – March 2026 |
+
+**Columns Used:**
+`Date`, `Country`, `Company`, `Sector`, `Sub_Sector`, `Open`, `High`, `Low`, `Close`, `Volume`, `BUY`, `SELL`, `Daily_Return`, `War_Period`
+
+**Engineered Features:**
+`Year`, `Month`, `Price_Range`, `BuySell_Ratio`, Lag features (`Lag1_Close`, `Lag2_Close`), Moving Averages (`MA5`, `MA10`)
 
 ---
 
-## 👥 Team
+## 🧠 Problem Statements Covered
 
-- **Team 1**
+| # | Problem Statement | ML Method | Models Used |
+|---|------------------|-----------|-------------|
+| 1 | **Stock Price Prediction** | Regression | Linear Regression, Random Forest, Gradient Boosting |
+| 2 | **Buy or Sell Signal Classification** | Classification | Logistic Regression, Decision Tree, Random Forest |
+| 3 | **Cross-Sector & Cross-Country Market Analysis** | Clustering + EDA | KMeans, PCA |
+| 4 | **Investor Behavior & Market Sentiment Analysis** | Feature Engineering + Regression | Random Forest |
+| 5 | **Portfolio Optimization** | Modern Portfolio Theory | SciPy Optimization |
+| 6 | **Stock Volatility Forecasting** | Regression | Random Forest, Ridge Regression |
+| 7 | **Anomaly Detection in Stock Data** | Unsupervised | Isolation Forest, Local Outlier Factor |
+| 8 | **Stock Market Trend Classification (Multi-Class)** | Multi-Class Classification | Random Forest Classifier |
+| 9 | **War Period Impact Analysis** | Statistical Testing | Hypothesis Testing |
+| 10 | **Sector Rotation Strategy using Return Momentum** | Momentum Strategy | Return Analysis |
 
 ---
 
-## 📄 License
+## 🚀 How to Run
 
-This project is for **educational purposes** only.
+1. **Clone or download** this repository.
+2. Make sure you have Python 3 installed.
+3. Install required libraries:
+   ```bash
+   pip install pandas numpy plotly seaborn scikit-learn scipy openpyxl
+   ```
+4. Place `Global_Stock_Market_Master_Dataset.xlsx` in the same folder as the notebook.
+5. Open the notebook:
+   ```bash
+   jupyter notebook Global_Stock_Market_ML_Project.ipynb
+   ```
+6. Run all cells from top to bottom (`Kernel → Restart & Run All`).
 
+---
 
+## 📊 Key Outputs
 
+- Interactive Plotly charts for every problem statement
+- Model performance comparison tables (MAE, RMSE, R², ROC-AUC)
+- Feature importance plots
+- Geographic and sector-wise heatmaps
+- Optimized portfolio weights and efficient frontier
+- Anomaly flagging on stock data
+- War period impact statistical report
+
+---
+
+## 📅 Project Info
+
+| Field | Detail |
+|-------|--------|
+| **Project Type** | Academic Mini Project |
+| **Language** | Python 3 |
+| **Notebook Format** | `.ipynb` (Jupyter Notebook) |
+| **Dataset Period** | Jan 2023 – Mar 2026 |
+| **Total Problem Statements** | 10 |
+
+---
+
+## 📝 License
+
+This project is created for **educational purposes only**. All stock market data used is for academic demonstration and analysis.
